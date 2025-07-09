@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="description" content="Aniwatch offers free HD anime streaming with dubbed and subbed versions. Watch the latest episodes and classic series without registration.">
+    <meta name="keywords" content="free anime streaming, watch anime online, dubbed anime, subbed anime, HD anime streaming, latest anime episodes, anime library, anime online free, anime streaming site, anime series online">
+    <meta property="og:title" content="Aniwatch - Free HD Anime Streaming with Dubbed & Subbed Versions">
+    <meta property="og:description" content="Aniwatch offers free HD anime streaming with dubbed and subbed versions. Watch the latest episodes and classic series without registration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uzumakisugeng45.github.io/aniwatch-se">
+    <meta property="og:image" content="https://i.imgur.com/Hsfm5go.png">
+    <link rel="canonical" href="https://uzumakisugeng45.github.io/aniwatch-se">
+    <link rel="icon" href="https://i.imgur.com/Hsfm5go.png" type="image/png">
+    <title>Aniwatch - Free HD Anime Streaming with Dubbed & Subbed Versions</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Aniwatch",
+      "url": "https://uzumakisugeng45.github.io/aniwatch-se",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://uzumakisugeng45.github.io/aniwatch-se/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #8e24aa 0%, #ff7043 100%);
+            color: white;
+            padding: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #fff176;
+            margin-left: 32px;
+            letter-spacing: 2px;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 14px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 28px;
+        }
+        nav ul li a {
+            color: #fffde7;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            border-radius: 22px;
+            transition: background 0.3s, color 0.3s;
+            background: linear-gradient(90deg, #ffb74d 0%, #ce93d8 100%);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        nav ul li a:hover {
+            background: linear-gradient(90deg, #ffd54f 0%, #ab47bc 100%);
+            color: #ff7043;
+        }
+        main {
+            max-width: 1200px;
+            margin: 32px auto 0 auto;
+            padding: 0 18px 40px 18px;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #8e24aa;
+            background: linear-gradient(90deg, #ff7043, #8e24aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 24px;
+        }
+        h1::after { content: " \u25B6"; color: #ff7043; }
+        h2 {
+            font-size: 2rem;
+            color: #ff7043;
+            margin-top: 36px;
+        }
+        h2::after { content: " \u2728"; color: #8e24aa; }
+        h3 {
+            font-size: 1.5rem;
+            color: #8e24aa;
+        }
+        h3::after { content: " \u2605"; color: #ff7043; }
+        .search-area {
+            margin: 30px 0 22px 0;
+            text-align: center;
+        }
+        .search-area input[type="text"] {
+            width: 60%;
+            padding: 12px 18px;
+            font-size: 1.1rem;
+            border: 2px solid #ab47bc;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+            background: #fffde7;
+            color: #8e24aa;
+        }
+        .search-area input[type="text"]:focus {
+            border-color: #ff7043;
+        }
+        .movie-list, .tv-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+        .movie-item, .tv-item {
+            background: linear-gradient(135deg, #fffde7 0%, #f3e5f5 100%);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(142,36,170,0.10);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s;
+        }
+        .movie-item:hover, .tv-item:hover {
+            transform: scale(1.04);
+            box-shadow: 0 4px 24px rgba(255,112,67,0.18);
+        }
+        .movie-item img, .tv-item img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+        }
+        .movie-info, .tv-info {
+            padding: 12px 16px 18px 16px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .movie-info h3, .tv-info h3 {
+            font-size: 1.15rem;
+            margin: 0 0 10px 0;
+            color: #8e24aa;
+        }
+        .movie-info a, .tv-info a {
+            text-align: center;
+            background: linear-gradient(90deg, #ff7043 0%, #8e24aa 100%);
+            color: #fffde7;
+            padding: 8px 0;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.02rem;
+            margin-top: 6px;
+            transition: background 0.3s;
+        }
+        .movie-info a:hover, .tv-info a:hover {
+            background: linear-gradient(90deg, #ffd54f 0%, #ab47bc 100%);
+            color: #ff7043;
+        }
+        ul {
+            margin: 0 0 16px 20px;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1.08rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        footer {
+            background: linear-gradient(90deg, #8e24aa 0%, #ff7043 100%);
+            color: #fffde7;
+            padding: 26px 0 18px 0;
+            text-align: center;
+            font-size: 1.08rem;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #fff176;
+            margin: 0 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.08rem;
+        }
+        footer a:hover {
+            color: #ff7043;
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .logo { font-size: 1.3rem; margin-left: 8px; }
+            .logo img { height: 30px; }
+            nav ul { gap: 10px; }
+            main { padding: 0 4px 20px 4px; }
+            .movie-list, .tv-list { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+            .movie-item img, .tv-item img { height: 170px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="https://i.imgur.com/Hsfm5go.png" alt="Aniwatch Logo">
+        Aniwatch
+    </div>
+    <nav>
+        <ul>
+            <li><a href="https://uzumakisugeng45.github.io/aniwatch-se/">Home</a></li>
+            <li><a href="https://uzumakisugeng45.github.io/aniwatch-se/">Home</a></li>
+            <li><a href="https://uzumakisugeng45.github.io/aniwatch-se/list-movie.html">List Movie</a></li>
+            <li><a href="https://uzumakisugeng45.github.io/aniwatch-se/list-tv.html">List TV</a></li>
+            <li><a href="#">H1</a></li>
+            <li><a href="#">H2</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Aniwatch: Your Ultimate Free Anime Streaming Platform</h1>
+    <p>
+        Welcome to <strong>Aniwatch</strong>, the definitive destination for anime lovers seeking a seamless, high-quality, and entirely free anime streaming experience. Whether you’re a lifelong otaku or a newcomer to the world of Japanese animation, Aniwatch is designed to meet all your entertainment needs—offering a vast, ever-expanding library of both classic and trending anime series and movies, available in English dubbed and subbed versions.
+    </p>
+    <h2>Why Aniwatch? ✨</h2>
+    <p>
+        Aniwatch stands out in the crowded landscape of anime streaming platforms for several reasons:
+    </p>
+    <ul>
+        <li><strong>Completely Free:</strong> No registration, no subscription, no hidden fees—Aniwatch is 100% free for everyone.</li>
+        <li><strong>Dubbed & Subbed Versions:</strong> Enjoy anime in your preferred language, with high-quality subtitles or English dubs.</li>
+        <li><strong>Extensive Anime Library:</strong> From the latest simulcasts to timeless classics, Aniwatch’s collection covers every genre and era.</li>
+        <li><strong>HD Streaming:</strong> Watch your favorite series and movies in crisp high-definition, with smooth playback on any device.</li>
+        <li><strong>User-Friendly Interface:</strong> Effortlessly browse, search, and filter through thousands of titles with a clean, intuitive design.</li>
+        <li><strong>Daily Updates:</strong> Stay up to date with new episodes and series added every day.</li>
+        <li><strong>Multi-Device Support:</strong> Stream on desktop, tablet, or mobile—Aniwatch is fully responsive and optimized for all screens.</li>
+        <li><strong>Safe & Secure:</strong> Enjoy a safe viewing experience with minimal and non-intrusive ads.</li>
+        <li><strong>Community Features:</strong> Engage with fellow fans through comments, ratings, and recommendations.</li>
+    </ul>
+    <h2>How to Use Aniwatch ✨</h2>
+    <ol>
+        <li>Open your browser and visit Aniwatch.</li>
+        <li>Browse the homepage or use the search bar to find your favorite anime.</li>
+        <li>Select a show or movie, choose between the dubbed or subbed version, and press play.</li>
+        <li>Enjoy HD streaming instantly—no account required!</li>
+    </ol>
+    <h2>Features That Set Aniwatch Apart ✨</h2>
+    <ul>
+        <li><strong>Personalized Recommendations:</strong> Discover new anime based on your viewing habits and preferences.</li>
+        <li><strong>Watchlists:</strong> Create and manage your own watchlists to keep track of what you want to see next.</li>
+        <li><strong>Genre Diversity:</strong> Explore a wide range of genres including action, romance, drama, fantasy, sci-fi, horror, slice-of-life, and more.</li>
+        <li><strong>Multiple Servers:</strong> Choose from different streaming servers for the best performance and reliability.</li>
+        <li><strong>Minimal Ads:</strong> Experience uninterrupted viewing with a focus on user comfort and safety.</li>
+        <li><strong>Accessible Worldwide:</strong> Aniwatch is available globally, with options to unblock the site via VPN if needed.</li>
+    </ul>
+    <h2>Is Aniwatch Legal? ✨</h2>
+    <p>
+        Aniwatch operates in a gray area depending on your country’s copyright laws. Always check your local regulations before streaming.
+    </p>
+    <h2>Frequently Asked Questions ✨</h2>
+    <h3>Is Aniwatch really free? ★</h3>
+    <p>Yes! Aniwatch is 100% free with no hidden charges or subscriptions. You can start watching instantly.</p>
+    <h3>Do I need to register? ★</h3>
+    <p>No registration needed. Just visit the site, pick your anime, and start streaming.</p>
+    <h3>What if Aniwatch is blocked in my region? ★</h3>
+    <p>You can use a VPN, proxy, or change your DNS settings to access Aniwatch from anywhere in the world.</p>
+    <h3>Does Aniwatch have an app? ★</h3>
+    <p>Currently, there is no official Aniwatch app, but the website is fully mobile-friendly.</p>
+    <h3>How often is Aniwatch updated? ★</h3>
+    <p>New episodes and series are added daily, so you’ll always find something new to watch.</p>
+    <h2>Best Alternatives to Aniwatch ✨</h2>
+    <ul>
+        <li><strong>9anime:</strong> High-quality anime streaming with fast updates.</li>
+        <li><strong>Gogoanime:</strong> Large anime collection with multiple servers.</li>
+        <li><strong>Crunchyroll:</strong> Legal streaming with free and premium plans.</li>
+        <li><strong>Funimation:</strong> Best for dubbed anime lovers.</li>
+        <li><strong>AnimeHeaven:</strong> Free streaming with an easy interface.</li>
+    </ul>
+    <h2>Search Your Favorite Anime ✨</h2>
+    <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Search anime...">
+    </div>
+    <center><script type="text/javascript">
+    atOptions = {
+    'key' : '4475681ea72ef1ba73f46e67ce13309a',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+    };
+    </script>
+    <script type="text/javascript" src="//grandshinyinsert.com/4475681ea72ef1ba73f46e67ce13309a/invoke.js"></script></center>
+    <section class="movie-list" id="movieList">
+        <h2>Drama Movies ✨</h2>
+        <!-- Movie items will be injected here by JS -->
+    </section>
+    <section class="tv-list" id="tvList">
+        <h2>Drama TV Shows ✨</h2>
+        <!-- TV items will be injected here by JS -->
+    </section>
+    <h2>Why Anime is So Popular Worldwide? ✨</h2>
+    <p>
+        Anime’s global appeal comes from its unique storytelling, stunning visuals, and the emotional depth of its characters. From epic adventures to heartfelt slice-of-life tales, anime offers something for everyone. The rise of streaming platforms like Aniwatch has made it easier than ever to access a diverse range of anime from anywhere in the world.
+    </p>
+    <h2>Explore the World of Anime with Aniwatch ✨</h2>
+    <p>
+        Whether you’re looking to binge-watch the latest hits or rediscover old favorites, Aniwatch is your gateway to the vibrant universe of Japanese animation. Join our community, create your own watchlists, and never miss an episode again!
+    </p>
+</main>
+<footer>
+    <a href="https://uzumakisugeng45.github.io/aniwatch-se/">Home</a> |
+    <a href="https://uzumakisugeng45.github.io/aniwatch-se/contact.html">Contact</a> |
+    <a href="https://uzumakisugeng45.github.io/aniwatch-se/terms.html">Terms</a> |
+    <a href="https://uzumakisugeng45.github.io/aniwatch-se/privacy.html">Privacy Policy</a>
+</footer>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4926023,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4926023&101" alt="frontpage hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+<script>
+// TMDB API key and base URLs
+const apiKey = 'e0b203e42e12587b6ce507b8aa452e8c';
+const movieList = document.getElementById('movieList');
+const tvList = document.getElementById('tvList');
+const searchInput = document.getElementById('searchInput');
+
+// Fetch Drama movies
+async function fetchDramaMovies() {
+    const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=18&sort_by=popularity.desc&language=en-US&page=1`);
+    const data = await response.json();
+    displayMovies(data.results.slice(0, 12));
+}
+
+// Fetch Drama TV shows
+async function fetchDramaTV() {
+    const response = await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&with_genres=18&sort_by=popularity.desc&language=en-US&page=1`);
+    const data = await response.json();
+    displayTVShows(data.results.slice(0, 12));
+}
+
+// Display movies
+function displayMovies(movies) {
+    movieList.innerHTML = '<h2>Drama Movies ✨</h2>';
+    movies.forEach(item => {
+        const movieItem = document.createElement('div');
+        movieItem.className = 'movie-item';
+        movieItem.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w300${item.poster_path}" alt="${item.title}">
+            <div class="movie-info">
+                <h3>${item.title}</h3>
+                <a href="https://uzumakisugeng45.github.io/aniwatch-se/player.html?id=${item.id}" target="_blank">Play Now</a>
+            </div>
+        `;
+        movieList.appendChild(movieItem);
+    });
+}
+
+// Display TV shows
+function displayTVShows(tvShows) {
+    tvList.innerHTML = '<h2>Drama TV Shows ✨</h2>';
+    tvShows.forEach(item => {
+        const tvItem = document.createElement('div');
+        tvItem.className = 'tv-item';
+        tvItem.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w300${item.poster_path}" alt="${item.name}">
+            <div class="tv-info">
+                <h3>${item.name}</h3>
+                <a href="https://uzumakisugeng45.github.io/aniwatch-se/player.html?tv=${item.id}" target="_blank">Play Now</a>
+            </div>
+        `;
+        tvList.appendChild(tvItem);
+    });
+}
+
+// Search TMDB
+searchInput.addEventListener('input', async (e) => {
+    const query = e.target.value.trim();
+    if(query.length < 3) {
+        fetchDramaMovies();
+        fetchDramaTV();
+        return;
+    }
+    const userLang = navigator.language || 'en-US';
+    const url = `https://tmdb.cdnweb.info/get.php?url=search/multi&lang=${userLang}&query=${encodeURIComponent(query)}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    // Clear lists
+    movieList.innerHTML = '';
+    tvList.innerHTML = '';
+    // Display search results
+    data.results.forEach(item => {
+        if(item.media_type === 'movie') {
+            const movieItem = document.createElement('div');
+            movieItem.className = 'movie-item';
+            movieItem.innerHTML = `
+                <img src="https://image.tmdb.org/t/p/w300${item.poster_path}" alt="${item.title}">
+                <div class="movie-info">
+                    <h3>${item.title}</h3>
+                    <a href="https://uzumakisugeng45.github.io/aniwatch-se/player.html?id=${item.id}" target="_blank">Play Now</a>
+                </div>
+            `;
+            movieList.appendChild(movieItem);
+        } else if(item.media_type === 'tv') {
+            const tvItem = document.createElement('div');
+            tvItem.className = 'tv-item';
+            tvItem.innerHTML = `
+                <img src="https://image.tmdb.org/t/p/w300${item.poster_path}" alt="${item.name}">
+                <div class="tv-info">
+                    <h3>${item.name}</h3>
+                    <a href="https://uzumakisugeng45.github.io/aniwatch-se/player.html?tv=${item.id}" target="_blank">Play Now</a>
+                </div>
+            `;
+            tvList.appendChild(tvItem);
+        }
+    });
+});
+
+// Initial fetch
+fetchDramaMovies();
+fetchDramaTV();
+</script>
+</body>
+</html>
