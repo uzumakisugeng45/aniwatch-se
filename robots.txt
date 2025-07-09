@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uzumakisugeng45.github.io/aniwatch-se/sitemap.xml
